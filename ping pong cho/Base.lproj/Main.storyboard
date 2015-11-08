@@ -64,7 +64,7 @@
                                 <animations/>
                                 <state key="normal" title="GAME PLAYER 1"/>
                                 <connections>
-                                    <action selector="twoScorePress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i5u-bt-x8z"/>
+                                    <action selector="oneGamePress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DsP-Zm-Yjc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7Z-FI-wwc">

@@ -38,11 +38,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func oneGamePress(sender: UIButton) {
-        playerOneScore = playerOneScore + 1
+    @IBAction func oneGamePress(sender: UIButton!) {
+        ++playerOneScore
         print(playerOneScore)
     }
-    @IBAction func twoGamePress(sender: UIButton) {
+
+    @IBAction func twoGamePress(sender: UIButton!) {
+        ++playerTwoScore
     }
     
 }
