@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var playerOneScore = 0
+    var playerTwoScore = 0
+    var playerOneGames = 0
+    var playerTwoGames = 0
 
     @IBOutlet weak var playerOneName: UITextField!
     @IBOutlet weak var playerOneGame: UIButton!
@@ -34,6 +39,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func oneGamePress(sender: UIButton) {
+        playerOneScore = playerOneScore + 1
+        print(playerOneScore)
     }
     @IBAction func twoGamePress(sender: UIButton) {
     }
