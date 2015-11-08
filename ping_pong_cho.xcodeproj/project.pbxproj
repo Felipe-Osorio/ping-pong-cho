@@ -14,6 +14,8 @@
 		21098E6E1BEECEF4005B33F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21098E6C1BEECEF4005B33F9 /* LaunchScreen.storyboard */; };
 		21098E791BEECEF4005B33F9 /* ping_pong_choTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21098E781BEECEF4005B33F9 /* ping_pong_choTests.swift */; };
 		21098E841BEECEF4005B33F9 /* ping_pong_choUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21098E831BEECEF4005B33F9 /* ping_pong_choUITests.swift */; };
+		21098E921BEEDFEF005B33F9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21098E911BEEDFEF005B33F9 /* Default-568h@2x.png */; };
+		21098E941BEEE035005B33F9 /* launch_rackets.png in Resources */ = {isa = PBXBuildFile; fileRef = 21098E931BEEE035005B33F9 /* launch_rackets.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +36,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		21098E601BEECEF4005B33F9 /* ping pong cho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ping pong cho.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21098E601BEECEF4005B33F9 /* ping_pong_cho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ping_pong_cho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21098E631BEECEF4005B33F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21098E651BEECEF4005B33F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		21098E681BEECEF4005B33F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21098E6A1BEECEF4005B33F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21098E6D1BEECEF4005B33F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21098E6F1BEECEF4005B33F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21098E741BEECEF4005B33F9 /* ping pong choTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ping pong choTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21098E741BEECEF4005B33F9 /* ping_pong_cho.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ping_pong_cho.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21098E781BEECEF4005B33F9 /* ping_pong_choTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ping_pong_choTests.swift; sourceTree = "<group>"; };
 		21098E7A1BEECEF4005B33F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21098E7F1BEECEF4005B33F9 /* ping pong choUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ping pong choUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21098E7F1BEECEF4005B33F9 /* ping_pong_cho.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ping_pong_cho.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21098E831BEECEF4005B33F9 /* ping_pong_choUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ping_pong_choUITests.swift; sourceTree = "<group>"; };
 		21098E851BEECEF4005B33F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21098E911BEEDFEF005B33F9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		21098E931BEEE035005B33F9 /* launch_rackets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launch_rackets.png; path = ../../launch_rackets.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		21098E571BEECEF3005B33F9 = {
 			isa = PBXGroup;
 			children = (
+				21098E911BEEDFEF005B33F9 /* Default-568h@2x.png */,
 				21098E621BEECEF4005B33F9 /* ping pong cho */,
 				21098E771BEECEF4005B33F9 /* ping pong choTests */,
 				21098E821BEECEF4005B33F9 /* ping pong choUITests */,
@@ -87,9 +92,9 @@
 		21098E611BEECEF4005B33F9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				21098E601BEECEF4005B33F9 /* ping pong cho.app */,
-				21098E741BEECEF4005B33F9 /* ping pong choTests.xctest */,
-				21098E7F1BEECEF4005B33F9 /* ping pong choUITests.xctest */,
+				21098E601BEECEF4005B33F9 /* ping_pong_cho.app */,
+				21098E741BEECEF4005B33F9 /* ping_pong_cho.xctest */,
+				21098E7F1BEECEF4005B33F9 /* ping_pong_cho.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 				21098E651BEECEF4005B33F9 /* ViewController.swift */,
 				21098E671BEECEF4005B33F9 /* Main.storyboard */,
 				21098E6A1BEECEF4005B33F9 /* Assets.xcassets */,
+				21098E931BEEE035005B33F9 /* launch_rackets.png */,
 				21098E6C1BEECEF4005B33F9 /* LaunchScreen.storyboard */,
 				21098E6F1BEECEF4005B33F9 /* Info.plist */,
 			);
@@ -128,9 +134,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		21098E5F1BEECEF3005B33F9 /* ping pong cho */ = {
+		21098E5F1BEECEF3005B33F9 /* ping_pong_cho */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21098E881BEECEF4005B33F9 /* Build configuration list for PBXNativeTarget "ping pong cho" */;
+			buildConfigurationList = 21098E881BEECEF4005B33F9 /* Build configuration list for PBXNativeTarget "ping_pong_cho" */;
 			buildPhases = (
 				21098E5C1BEECEF3005B33F9 /* Sources */,
 				21098E5D1BEECEF3005B33F9 /* Frameworks */,
@@ -140,14 +146,14 @@
 			);
 			dependencies = (
 			);
-			name = "ping pong cho";
+			name = ping_pong_cho;
 			productName = "ping pong cho";
-			productReference = 21098E601BEECEF4005B33F9 /* ping pong cho.app */;
+			productReference = 21098E601BEECEF4005B33F9 /* ping_pong_cho.app */;
 			productType = "com.apple.product-type.application";
 		};
-		21098E731BEECEF4005B33F9 /* ping pong choTests */ = {
+		21098E731BEECEF4005B33F9 /* ping_pong_choTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21098E8B1BEECEF4005B33F9 /* Build configuration list for PBXNativeTarget "ping pong choTests" */;
+			buildConfigurationList = 21098E8B1BEECEF4005B33F9 /* Build configuration list for PBXNativeTarget "ping_pong_choTests" */;
 			buildPhases = (
 				21098E701BEECEF4005B33F9 /* Sources */,
 				21098E711BEECEF4005B33F9 /* Frameworks */,
@@ -158,14 +164,14 @@
 			dependencies = (
 				21098E761BEECEF4005B33F9 /* PBXTargetDependency */,
 			);
-			name = "ping pong choTests";
+			name = ping_pong_choTests;
 			productName = "ping pong choTests";
-			productReference = 21098E741BEECEF4005B33F9 /* ping pong choTests.xctest */;
+			productReference = 21098E741BEECEF4005B33F9 /* ping_pong_cho.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		21098E7E1BEECEF4005B33F9 /* ping pong choUITests */ = {
+		21098E7E1BEECEF4005B33F9 /* ping_pong_choUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21098E8E1BEECEF4005B33F9 /* Build configuration list for PBXNativeTarget "ping pong choUITests" */;
+			buildConfigurationList = 21098E8E1BEECEF4005B33F9 /* Build configuration list for PBXNativeTarget "ping_pong_choUITests" */;
 			buildPhases = (
 				21098E7B1BEECEF4005B33F9 /* Sources */,
 				21098E7C1BEECEF4005B33F9 /* Frameworks */,
@@ -176,9 +182,9 @@
 			dependencies = (
 				21098E811BEECEF4005B33F9 /* PBXTargetDependency */,
 			);
-			name = "ping pong choUITests";
+			name = ping_pong_choUITests;
 			productName = "ping pong choUITests";
-			productReference = 21098E7F1BEECEF4005B33F9 /* ping pong choUITests.xctest */;
+			productReference = 21098E7F1BEECEF4005B33F9 /* ping_pong_cho.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -193,6 +199,7 @@
 				TargetAttributes = {
 					21098E5F1BEECEF3005B33F9 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = WP9A3KK2CL;
 					};
 					21098E731BEECEF4005B33F9 = {
 						CreatedOnToolsVersion = 7.1;
@@ -204,7 +211,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 21098E5B1BEECEF3005B33F9 /* Build configuration list for PBXProject "ping pong cho" */;
+			buildConfigurationList = 21098E5B1BEECEF3005B33F9 /* Build configuration list for PBXProject "ping_pong_cho" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -217,9 +224,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				21098E5F1BEECEF3005B33F9 /* ping pong cho */,
-				21098E731BEECEF4005B33F9 /* ping pong choTests */,
-				21098E7E1BEECEF4005B33F9 /* ping pong choUITests */,
+				21098E5F1BEECEF3005B33F9 /* ping_pong_cho */,
+				21098E731BEECEF4005B33F9 /* ping_pong_choTests */,
+				21098E7E1BEECEF4005B33F9 /* ping_pong_choUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -230,7 +237,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				21098E6E1BEECEF4005B33F9 /* LaunchScreen.storyboard in Resources */,
+				21098E921BEEDFEF005B33F9 /* Default-568h@2x.png in Resources */,
 				21098E6B1BEECEF4005B33F9 /* Assets.xcassets in Resources */,
+				21098E941BEEE035005B33F9 /* launch_rackets.png in Resources */,
 				21098E691BEECEF4005B33F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,12 +291,12 @@
 /* Begin PBXTargetDependency section */
 		21098E761BEECEF4005B33F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 21098E5F1BEECEF3005B33F9 /* ping pong cho */;
+			target = 21098E5F1BEECEF3005B33F9 /* ping_pong_cho */;
 			targetProxy = 21098E751BEECEF4005B33F9 /* PBXContainerItemProxy */;
 		};
 		21098E811BEECEF4005B33F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 21098E5F1BEECEF3005B33F9 /* ping pong cho */;
+			target = 21098E5F1BEECEF3005B33F9 /* ping_pong_cho */;
 			targetProxy = 21098E801BEECEF4005B33F9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -399,10 +408,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ping pong cho/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "felipe-osorio.ping-pong-cho";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ping_pong_cho;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -410,10 +423,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ping pong cho/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "felipe-osorio.ping-pong-cho";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ping_pong_cho;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -424,8 +441,8 @@
 				INFOPLIST_FILE = "ping pong choTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "felipe-osorio.ping-pong-choTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ping pong cho.app/ping pong cho";
+				PRODUCT_NAME = ping_pong_cho;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ping_pong_cho.app/ping_pong_cho";
 			};
 			name = Debug;
 		};
@@ -436,8 +453,8 @@
 				INFOPLIST_FILE = "ping pong choTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "felipe-osorio.ping-pong-choTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ping pong cho.app/ping pong cho";
+				PRODUCT_NAME = ping_pong_cho;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ping_pong_cho.app/ping_pong_cho";
 			};
 			name = Release;
 		};
@@ -447,7 +464,7 @@
 				INFOPLIST_FILE = "ping pong choUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "felipe-osorio.ping-pong-choUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ping_pong_cho;
 				TEST_TARGET_NAME = "ping pong cho";
 				USES_XCTRUNNER = YES;
 			};
@@ -459,7 +476,7 @@
 				INFOPLIST_FILE = "ping pong choUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "felipe-osorio.ping-pong-choUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ping_pong_cho;
 				TEST_TARGET_NAME = "ping pong cho";
 				USES_XCTRUNNER = YES;
 			};
@@ -468,7 +485,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		21098E5B1BEECEF3005B33F9 /* Build configuration list for PBXProject "ping pong cho" */ = {
+		21098E5B1BEECEF3005B33F9 /* Build configuration list for PBXProject "ping_pong_cho" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21098E861BEECEF4005B33F9 /* Debug */,
@@ -477,7 +494,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21098E881BEECEF4005B33F9 /* Build configuration list for PBXNativeTarget "ping pong cho" */ = {
+		21098E881BEECEF4005B33F9 /* Build configuration list for PBXNativeTarget "ping_pong_cho" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21098E891BEECEF4005B33F9 /* Debug */,
@@ -485,7 +502,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		21098E8B1BEECEF4005B33F9 /* Build configuration list for PBXNativeTarget "ping pong choTests" */ = {
+		21098E8B1BEECEF4005B33F9 /* Build configuration list for PBXNativeTarget "ping_pong_choTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21098E8C1BEECEF4005B33F9 /* Debug */,
@@ -493,7 +510,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		21098E8E1BEECEF4005B33F9 /* Build configuration list for PBXNativeTarget "ping pong choUITests" */ = {
+		21098E8E1BEECEF4005B33F9 /* Build configuration list for PBXNativeTarget "ping_pong_choUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21098E8F1BEECEF4005B33F9 /* Debug */,
