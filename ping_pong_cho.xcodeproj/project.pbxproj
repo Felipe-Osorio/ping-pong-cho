@@ -15,7 +15,6 @@
 		21098E791BEECEF4005B33F9 /* ping_pong_choTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21098E781BEECEF4005B33F9 /* ping_pong_choTests.swift */; };
 		21098E841BEECEF4005B33F9 /* ping_pong_choUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21098E831BEECEF4005B33F9 /* ping_pong_choUITests.swift */; };
 		21098E921BEEDFEF005B33F9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21098E911BEEDFEF005B33F9 /* Default-568h@2x.png */; };
-		21098E941BEEE035005B33F9 /* launch_rackets.png in Resources */ = {isa = PBXBuildFile; fileRef = 21098E931BEEE035005B33F9 /* launch_rackets.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		21098E831BEECEF4005B33F9 /* ping_pong_choUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ping_pong_choUITests.swift; sourceTree = "<group>"; };
 		21098E851BEECEF4005B33F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21098E911BEEDFEF005B33F9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		21098E931BEEE035005B33F9 /* launch_rackets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launch_rackets.png; path = ../../launch_rackets.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +104,6 @@
 				21098E651BEECEF4005B33F9 /* ViewController.swift */,
 				21098E671BEECEF4005B33F9 /* Main.storyboard */,
 				21098E6A1BEECEF4005B33F9 /* Assets.xcassets */,
-				21098E931BEEE035005B33F9 /* launch_rackets.png */,
 				21098E6C1BEECEF4005B33F9 /* LaunchScreen.storyboard */,
 				21098E6F1BEECEF4005B33F9 /* Info.plist */,
 			);
@@ -239,7 +236,6 @@
 				21098E6E1BEECEF4005B33F9 /* LaunchScreen.storyboard in Resources */,
 				21098E921BEEDFEF005B33F9 /* Default-568h@2x.png in Resources */,
 				21098E6B1BEECEF4005B33F9 /* Assets.xcassets in Resources */,
-				21098E941BEEE035005B33F9 /* launch_rackets.png in Resources */,
 				21098E691BEECEF4005B33F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +497,7 @@
 				21098E8A1BEECEF4005B33F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21098E8B1BEECEF4005B33F9 /* Build configuration list for PBXNativeTarget "ping_pong_choTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +506,7 @@
 				21098E8D1BEECEF4005B33F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21098E8E1BEECEF4005B33F9 /* Build configuration list for PBXNativeTarget "ping_pong_choUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +515,7 @@
 				21098E901BEECEF4005B33F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
