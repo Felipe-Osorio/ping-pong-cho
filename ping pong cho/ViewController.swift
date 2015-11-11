@@ -18,11 +18,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var playerOneScore: UITextField!
     @IBOutlet weak var playerOneGame: UIButton!
     @IBOutlet weak var playerOneCho: UIStepper!
+    @IBOutlet weak var playerOneGameDisplay: UITextField!
     
     @IBOutlet weak var playerTwoScore: UITextField!
     @IBOutlet weak var playerTwoGame: UIButton!
     @IBOutlet weak var playerTwoCho: UIStepper!
-    
+    @IBOutlet weak var playerTwoGameDisplay: UITextField!
     
     @IBOutlet weak var gameProgressBar: UIProgressView!
     @IBOutlet weak var oldSchoolOn: UISwitch!
@@ -35,6 +36,7 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        //gameProgressBar.valueForKey(<#T##key: String##String#>) += 0.5
         print("OOPS. MEMORY WARNING!")
         // Dispose of any resources that can be recreated.
     }
@@ -50,17 +52,28 @@ class ViewController: UIViewController {
     }
     @IBAction func oneClicker(sender: UIStepper) { //increment score
         playerOneTally = Int(sender.value)
+        print(playerOneTally)
         self.playerOneScore.text = playerOneTally.description
         if (playerOneTally >= 11) && (playerOneTally - playerTwoTally >= 2) {
             playerOneGames++ // player one wins a game
+            self.playerOneGameDisplay.text = String(playerOneGames.value)
             playerOneTally = 0 // reset the counter to new game
+            playerOneCho.value = 0
+            playerTwoTally = 0
+            playerTwoCho.value = 0
             self.playerOneScore.text = playerOneTally.description
             print("inside conditional stepper 1")
         }
         
     }
     @IBAction func twoClicker(sender: UIStepper) { //increment score
-        self.playerTwoScore.text = Int(sender.value).description
+        playerTwoTally = Int(sender.value)
+        self.playerTwoScore.text = playerTwoTally.description
+        if (playerTwoTally >= 11) && (playerTwoTally - playerOneTally >= 2) {
+            playerTwoGames++
+            self.playerTwoGameDisplay.text = String(playerTwoGames.value)
+            print("player two takes the game")
+        }
     }
 }
 

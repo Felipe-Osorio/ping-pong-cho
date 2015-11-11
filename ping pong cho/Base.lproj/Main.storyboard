@@ -90,13 +90,13 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aLl-vt-4Gd">
-                                <rect key="frame" x="101" y="247" width="30" height="30"/>
+                                <rect key="frame" x="90" y="247" width="50" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYh-mz-2VJ">
-                                <rect key="frame" x="451" y="247" width="30" height="30"/>
+                                <rect key="frame" x="440" y="247" width="50" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -110,9 +110,11 @@
                         <outlet property="oldSchoolOn" destination="dLt-8L-Bve" id="m5l-fI-nsj"/>
                         <outlet property="playerOneCho" destination="7kS-wW-EXz" id="PAi-Ai-eEh"/>
                         <outlet property="playerOneGame" destination="Hmn-cz-9Vf" id="OwW-lL-gcz"/>
+                        <outlet property="playerOneGameDisplay" destination="aLl-vt-4Gd" id="mlo-Fr-uV4"/>
                         <outlet property="playerOneScore" destination="MUe-fa-kYz" id="YFk-Ra-YSa"/>
                         <outlet property="playerTwoCho" destination="6ED-Iw-lIJ" id="Qpq-PM-mvy"/>
                         <outlet property="playerTwoGame" destination="g7Z-FI-wwc" id="MsC-3p-RF2"/>
+                        <outlet property="playerTwoGameDisplay" destination="bYh-mz-2VJ" id="JEb-Ts-jCH"/>
                         <outlet property="playerTwoScore" destination="EmS-Jg-GUq" id="h2z-uI-UeX"/>
                     </connections>
                 </viewController>
