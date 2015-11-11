@@ -101,12 +101,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRW-95-wTC">
+                                <rect key="frame" x="291" y="95" width="39" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.002546889989" green="0.3027586243" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.32160560344827588" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="gameProgressBar" destination="xtr-nr-Toe" id="ymf-M2-f9z"/>
+                        <outlet property="gameProgressLabel" destination="fRW-95-wTC" id="SLF-dk-jWi"/>
                         <outlet property="oldSchoolOn" destination="dLt-8L-Bve" id="m5l-fI-nsj"/>
                         <outlet property="playerOneCho" destination="7kS-wW-EXz" id="PAi-Ai-eEh"/>
                         <outlet property="playerOneGame" destination="Hmn-cz-9Vf" id="OwW-lL-gcz"/>
