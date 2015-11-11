@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    //var playerOneScore = 0
-    //var playerTwoScore = 0
+    var playerOneTally = 0
+    var playerTwoTally = 0
     var playerOneGames = 0
     var playerTwoGames = 0
 
@@ -35,11 +35,12 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        print("OOPS. MEMORY WARNING!")
         // Dispose of any resources that can be recreated.
     }
 
     @IBAction func oneGamePress(sender: UIButton!) { //won game
-        ++playerOneGames
+        ++playerOneGames //manually increment player 1 games
         print(playerOneGames)
     }
 
@@ -48,7 +49,15 @@ class ViewController: UIViewController {
         print(playerTwoGames)
     }
     @IBAction func oneClicker(sender: UIStepper) { //increment score
-        self.playerOneScore.text = Int(sender.value).description
+        playerOneTally = Int(sender.value)
+        self.playerOneScore.text = playerOneTally.description
+        if (playerOneTally >= 11) && (playerOneTally - playerTwoTally >= 2) {
+            playerOneGames++ // player one wins a game
+            playerOneTally = 0 // reset the counter to new game
+            self.playerOneScore.text = playerOneTally.description
+            print("inside conditional stepper 1")
+        }
+        
     }
     @IBAction func twoClicker(sender: UIStepper) { //increment score
         self.playerTwoScore.text = Int(sender.value).description
