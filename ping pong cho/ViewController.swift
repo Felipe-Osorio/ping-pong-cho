@@ -42,9 +42,9 @@ class ViewController: UIViewController {
         oldSchool.setOn(false, animated: true)
     }
     
-    override func shouldAutorotate() -> Bool {
-        return true
-    }
+//    override func shouldAutorotate() -> Bool {
+//        return true
+//    }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
         view.endEditing(true)
