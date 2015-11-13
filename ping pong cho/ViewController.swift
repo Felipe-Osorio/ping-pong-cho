@@ -17,31 +17,27 @@ class ViewController: UIViewController {
     var pointsToWin = 11
     var overallProgress = Float(0)
 
-    //@IBOutlet weak var playerOneScore: UITextField!
     @IBOutlet weak var playerOneScore: UILabel!
     @IBOutlet weak var playerOneGame: UIButton!
     @IBOutlet weak var playerOneCho: UIStepper!
-//    @IBOutlet weak var playerOneGameDisplay: UITextField!
     @IBOutlet weak var playerOneGameDisplay: UILabel!
     
-    //@IBOutlet weak var playerTwoScore: UITextField!
     @IBOutlet weak var playerTwoScore: UILabel!
     @IBOutlet weak var playerTwoGame: UIButton!
     @IBOutlet weak var playerTwoCho: UIStepper!
-//    @IBOutlet weak var playerTwoGameDisplay: UITextField!
     @IBOutlet weak var playerTwoGameDisplay: UILabel!
     
     @IBOutlet weak var gameProgressLabel: UILabel!
     @IBOutlet weak var gameProgressBar: UIProgressView!
     
-    @IBOutlet weak var oldSchoolOn: UISwitch!
+    @IBOutlet weak var oldSchool: UISwitch!
     @IBOutlet weak var winnerLabel: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         gameProgressBar.setProgress(0, animated: true)
-        oldSchoolOn.setOn(false, animated: true)
+        oldSchool.setOn(false, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,10 +61,10 @@ class ViewController: UIViewController {
         }
         print(playerTwoGames)
     }
+    
     @IBAction func oneClicker(sender: UIStepper) { //increment score
         playerOneTally = Int(sender.value)
         print("Player 1 has \(playerOneTally) points")
-        updateMatchProgress()
         self.playerOneScore.text = playerOneTally.description
 //        oldSchoolFun()
         if (playerOneTally >= pointsToWin) && (playerOneTally - playerTwoTally >= 2) { //11 = winPoints
@@ -77,12 +73,13 @@ class ViewController: UIViewController {
             resetPointScores()
             print("Player 1 takes Game \(playerOneGames + playerTwoGames)")
         }
+        updateMatchProgress()
         
     }
+    
     @IBAction func twoClicker(sender: UIStepper) { //increment score
         playerTwoTally = Int(sender.value)
         print("Player 2 has \(playerTwoTally) points")
-        updateMatchProgress()
 //        oldSchoolFun()
         self.playerTwoScore.text = playerTwoTally.description
         if (playerTwoTally >= pointsToWin) && (playerTwoTally - playerOneTally >= 2) {
@@ -91,7 +88,9 @@ class ViewController: UIViewController {
             resetPointScores()
             print("Player 2 takes Game \(playerOneGames + playerTwoGames)")
         }
+        updateMatchProgress()
     }
+    
     func resetPointScores() {
         playerOneTally = 0 // reset the counter to new game
         playerOneCho.value = 0
@@ -100,12 +99,26 @@ class ViewController: UIViewController {
         self.playerOneScore.text = playerOneTally.description
         self.playerTwoScore.text = playerTwoTally.description
     }
+    
     func updateMatchProgress() {
-        overallProgress = Float(playerOneGames + playerTwoGames) * 0.20
+        let gamesPlayed = Int(playerOneGames + playerTwoGames)
+        if playerOneGames >= 3 || playerTwoGames >= 3 || gamesPlayed >= 5 { // best of 5 games assumed default
+            gameProgressBar.setProgress(1.00, animated: true)
+            return()
+        }
+        overallProgress = Float(gamesPlayed) * 0.20
         let currentProgress = Float(playerOneTally + playerTwoTally)/100.00 + Float(overallProgress)
         gameProgressBar.setProgress(currentProgress, animated: false)
         gameProgressLabel.text = ("\(currentProgress*100)%")
         print("Match progress at \(currentProgress*100)%")
+    }
+    func oldSchoolFun() {
+        if oldSchool.on {
+            pointsToWin = 21
+        }
+        else {
+            pointsToWin = 11
+        }
     }
     
     var counter:Int = 0 {
