@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import QuartzCore
 
 class ViewController: UIViewController {
     
@@ -29,9 +30,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var gameProgressLabel: UILabel!
     @IBOutlet weak var gameProgressBar: UIProgressView!
+    @IBOutlet weak var winnerLabel: UILabel!
     
     @IBOutlet weak var oldSchool: UISwitch!
-    @IBOutlet weak var winnerLabel: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +44,9 @@ class ViewController: UIViewController {
         oldSchool.setOn(false, animated: true)
     }
     
-    override func shouldAutorotate() -> Bool {
-        return true
-    }
+//    override func shouldAutorotate() -> Bool {
+//        return true
+//    }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
         view.endEditing(true)
@@ -74,6 +76,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func oneClicker(sender: UIStepper) { //increment score
+        winnerLabel.text = ""
+        winnerLabel.layer.borderWidth = 0.0
         playerOneTally = Int(sender.value)
         print("Player 1 has \(playerOneTally) points")
         self.playerOneScore.text = playerOneTally.description
@@ -89,6 +93,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func twoClicker(sender: UIStepper) { //increment score
+        winnerLabel.text = ""
+        winnerLabel.layer.borderWidth = 0.0
         playerTwoTally = Int(sender.value)
         print("Player 2 has \(playerTwoTally) points")
         oldSchoolFun()
@@ -133,10 +139,11 @@ class ViewController: UIViewController {
     }
     
     func triggerVictory() {
-        print("Victory triggered")
         winnerLabel.text = ("CHO!")
-        sleep(1)
-        winnerLabel.text = ("NO MORE")
+        winnerLabel.layer.borderWidth = 4.0
+        winnerLabel.layer.borderColor = UIColor.redColor().CGColor
+        print("Victory triggered")
+        //sleep(1)
         resetPointScores()
     }
 
