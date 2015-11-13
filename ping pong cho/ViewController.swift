@@ -135,8 +135,8 @@ class ViewController: UIViewController {
     func triggerVictory() {
         print("Victory triggered")
         winnerLabel.text = ("CHO!")
-        sleep(3)
-        winnerLabel.text = ("")
+        sleep(1)
+        winnerLabel.text = ("NO MORE")
         resetPointScores()
     }
 
