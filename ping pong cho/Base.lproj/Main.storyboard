@@ -131,7 +131,7 @@
                     <connections>
                         <outlet property="gameProgressBar" destination="xtr-nr-Toe" id="ymf-M2-f9z"/>
                         <outlet property="gameProgressLabel" destination="fRW-95-wTC" id="SLF-dk-jWi"/>
-                        <outlet property="oldSchoolOn" destination="dLt-8L-Bve" id="m5l-fI-nsj"/>
+                        <outlet property="oldSchool" destination="dLt-8L-Bve" id="J5u-AW-eKH"/>
                         <outlet property="playerOneCho" destination="7kS-wW-EXz" id="PAi-Ai-eEh"/>
                         <outlet property="playerOneGame" destination="Hmn-cz-9Vf" id="OwW-lL-gcz"/>
                         <outlet property="playerOneGameDisplay" destination="uEf-gp-bTI" id="rfh-fN-Mpu"/>

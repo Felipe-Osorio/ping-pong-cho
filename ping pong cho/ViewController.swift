@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         playerOneTally = Int(sender.value)
         print("Player 1 has \(playerOneTally) points")
         self.playerOneScore.text = playerOneTally.description
-//        oldSchoolFun()
+        oldSchoolFun()
         if (playerOneTally >= pointsToWin) && (playerOneTally - playerTwoTally >= 2) { //11 = winPoints
             playerOneGames++ // player one wins a game
             self.playerOneGameDisplay.text = playerOneGames.description
@@ -80,7 +80,7 @@ class ViewController: UIViewController {
     @IBAction func twoClicker(sender: UIStepper) { //increment score
         playerTwoTally = Int(sender.value)
         print("Player 2 has \(playerTwoTally) points")
-//        oldSchoolFun()
+        oldSchoolFun()
         self.playerTwoScore.text = playerTwoTally.description
         if (playerTwoTally >= pointsToWin) && (playerTwoTally - playerOneTally >= 2) {
             playerTwoGames++
