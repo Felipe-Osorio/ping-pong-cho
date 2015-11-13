@@ -45,6 +45,11 @@ class ViewController: UIViewController {
     override func shouldAutorotate() -> Bool {
         return true
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
