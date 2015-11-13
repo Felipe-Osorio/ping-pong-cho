@@ -36,8 +36,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let value = UIInterfaceOrientation.LandscapeLeft.rawValue
+        UIDevice.currentDevice().setValue(value, forKey: "orientation")
         gameProgressBar.setProgress(0, animated: true)
         oldSchool.setOn(false, animated: true)
+    }
+    
+    override func shouldAutorotate() -> Bool {
+        return true
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,6 +76,7 @@ class ViewController: UIViewController {
         if (playerOneTally >= pointsToWin) && (playerOneTally - playerTwoTally >= 2) { //11 = winPoints
             playerOneGames++ // player one wins a game
             self.playerOneGameDisplay.text = playerOneGames.description
+            triggerVictory() // player 1!
             resetPointScores()
             print("Player 1 takes Game \(playerOneGames + playerTwoGames)")
         }
@@ -85,6 +92,7 @@ class ViewController: UIViewController {
         if (playerTwoTally >= pointsToWin) && (playerTwoTally - playerOneTally >= 2) {
             playerTwoGames++
             self.playerTwoGameDisplay.text = playerTwoGames.description
+            triggerVictory() // player 2!
             resetPointScores()
             print("Player 2 takes Game \(playerOneGames + playerTwoGames)")
         }
@@ -121,13 +129,10 @@ class ViewController: UIViewController {
         }
     }
     
-    var counter:Int = 0 {
-        didSet {
-            let fractionalProgress = Float(counter) / 100.0
-            let animated = counter != 0
-            gameProgressBar.setProgress(fractionalProgress, animated: animated)
-            gameProgressLabel.text = ("\(counter)%")
-        }
+    func triggerVictory() {
+        winnerLabel.text = ("CHO!")
+        sleep(5)
+        winnerLabel.text = ("")
     }
 
 }
