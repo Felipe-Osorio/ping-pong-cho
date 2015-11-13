@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "21098E5F1BEECEF3005B33F9"
                BuildableName = "ping_pong_cho.app"
-               BlueprintName = "ping_pong_cho"
-               ReferencedContainer = "container:ping_pong_cho.xcodeproj">
+               BlueprintName = "CHO"
+               ReferencedContainer = "container:CHO.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "21098E731BEECEF4005B33F9"
-               BuildableName = "ping_pong_cho.xctest"
-               BlueprintName = "ping_pong_choTests"
-               ReferencedContainer = "container:ping_pong_cho.xcodeproj">
+               BuildableName = "CHO.xctest"
+               BlueprintName = "CHOTests"
+               ReferencedContainer = "container:CHO.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "21098E7E1BEECEF4005B33F9"
-               BuildableName = "ping_pong_cho.xctest"
-               BlueprintName = "ping_pong_choUITests"
-               ReferencedContainer = "container:ping_pong_cho.xcodeproj">
+               BuildableName = "CHO.xctest"
+               BlueprintName = "CHOUITests"
+               ReferencedContainer = "container:CHO.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -54,8 +54,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "21098E5F1BEECEF3005B33F9"
             BuildableName = "ping_pong_cho.app"
-            BlueprintName = "ping_pong_cho"
-            ReferencedContainer = "container:ping_pong_cho.xcodeproj">
+            BlueprintName = "CHO"
+            ReferencedContainer = "container:CHO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -77,8 +77,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "21098E5F1BEECEF3005B33F9"
             BuildableName = "ping_pong_cho.app"
-            BlueprintName = "ping_pong_cho"
-            ReferencedContainer = "container:ping_pong_cho.xcodeproj">
+            BlueprintName = "CHO"
+            ReferencedContainer = "container:CHO.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,8 +96,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "21098E5F1BEECEF3005B33F9"
             BuildableName = "ping_pong_cho.app"
-            BlueprintName = "ping_pong_cho"
-            ReferencedContainer = "container:ping_pong_cho.xcodeproj">
+            BlueprintName = "CHO"
+            ReferencedContainer = "container:CHO.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
