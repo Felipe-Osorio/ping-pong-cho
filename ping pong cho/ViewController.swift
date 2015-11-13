@@ -82,7 +82,6 @@ class ViewController: UIViewController {
             playerOneGames++ // player one wins a game
             self.playerOneGameDisplay.text = playerOneGames.description
             triggerVictory() // player 1!
-            resetPointScores()
             print("Player 1 takes Game \(playerOneGames + playerTwoGames)")
         }
         updateMatchProgress()
@@ -98,7 +97,6 @@ class ViewController: UIViewController {
             playerTwoGames++
             self.playerTwoGameDisplay.text = playerTwoGames.description
             triggerVictory() // player 2!
-            resetPointScores()
             print("Player 2 takes Game \(playerOneGames + playerTwoGames)")
         }
         updateMatchProgress()
@@ -123,7 +121,7 @@ class ViewController: UIViewController {
         let currentProgress = Float(playerOneTally + playerTwoTally)/100.00 + Float(overallProgress)
         gameProgressBar.setProgress(currentProgress, animated: false)
         gameProgressLabel.text = ("\(currentProgress*100)%")
-        print("Match progress at \(currentProgress*100)%")
+        //print("Match progress at \(currentProgress*100)%")
     }
     func oldSchoolFun() {
         if oldSchool.on {
@@ -135,9 +133,11 @@ class ViewController: UIViewController {
     }
     
     func triggerVictory() {
+        print("Victory triggered")
         winnerLabel.text = ("CHO!")
-        sleep(5)
+        sleep(3)
         winnerLabel.text = ("")
+        resetPointScores()
     }
 
 }
