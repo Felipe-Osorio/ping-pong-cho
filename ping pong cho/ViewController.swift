@@ -36,8 +36,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let value = UIInterfaceOrientation.LandscapeLeft.rawValue
-        UIDevice.currentDevice().setValue(value, forKey: "orientation")
+        //let value = UIInterfaceOrientation.LandscapeLeft.rawValue
+        //UIDevice.currentDevice().setValue(value, forKey: "orientation")
         gameProgressBar.setProgress(0, animated: true)
         oldSchool.setOn(false, animated: true)
     }
@@ -78,7 +78,7 @@ class ViewController: UIViewController {
         print("Player 1 has \(playerOneTally) points")
         self.playerOneScore.text = playerOneTally.description
         oldSchoolFun()
-        if (playerOneTally >= pointsToWin) && (playerOneTally - playerTwoTally >= 2) { //11 = winPoints
+        if (playerOneTally >= pointsToWin) && (playerOneTally - playerTwoTally >= 2) { //11 = pointsToWin
             playerOneGames++ // player one wins a game
             self.playerOneGameDisplay.text = playerOneGames.description
             triggerVictory() // player 1!
@@ -94,7 +94,7 @@ class ViewController: UIViewController {
         print("Player 2 has \(playerTwoTally) points")
         oldSchoolFun()
         self.playerTwoScore.text = playerTwoTally.description
-        if (playerTwoTally >= pointsToWin) && (playerTwoTally - playerOneTally >= 2) {
+        if (playerTwoTally >= pointsToWin) && (playerTwoTally - playerOneTally >= 2) { // must win by 2
             playerTwoGames++
             self.playerTwoGameDisplay.text = playerTwoGames.description
             triggerVictory() // player 2!
@@ -123,7 +123,7 @@ class ViewController: UIViewController {
         let currentProgress = Float(playerOneTally + playerTwoTally)/100.00 + Float(overallProgress)
         gameProgressBar.setProgress(currentProgress, animated: false)
         gameProgressLabel.text = ("\(currentProgress*100)%")
-        print("Match progress at \(currentProgress*100)%")
+        //print("Match progress at \(currentProgress*100)%")
     }
     func oldSchoolFun() {
         if oldSchool.on {
@@ -135,9 +135,9 @@ class ViewController: UIViewController {
     }
     
     func triggerVictory() {
-        winnerLabel.text = ("CHO!")
+        winnerLabel.text = "CHO!" //for whom
         sleep(5)
-        winnerLabel.text = ("")
+        winnerLabel.text = ""
     }
 
 }

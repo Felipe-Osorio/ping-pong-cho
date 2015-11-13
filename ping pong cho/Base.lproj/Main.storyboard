@@ -74,7 +74,7 @@
                                     <action selector="twoGamePress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dKr-JV-Q2D"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eOo-Zd-wkk">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="-" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eOo-Zd-wkk">
                                 <rect key="frame" x="224" y="251" width="140" height="53"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
