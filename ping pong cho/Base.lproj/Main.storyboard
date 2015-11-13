@@ -90,15 +90,15 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aLl-vt-4Gd">
-                                <rect key="frame" x="187" y="92" width="50" height="30"/>
+                                <rect key="frame" x="187" y="312" width="50" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRW-95-wTC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRW-95-wTC">
                                 <rect key="frame" x="269" y="113" width="61" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.002546889989" green="0.3027586243" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -116,12 +116,26 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEf-gp-bTI">
+                                <rect key="frame" x="187" y="93" width="42" height="50"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYh-mz-2VJ">
-                                <rect key="frame" x="351" y="90" width="50" height="30"/>
+                                <rect key="frame" x="351" y="312" width="50" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeW-4Q-WVc">
+                                <rect key="frame" x="359" y="93" width="42" height="50"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.32160560344827588" colorSpace="calibratedRGB"/>
@@ -132,11 +146,11 @@
                         <outlet property="oldSchoolOn" destination="dLt-8L-Bve" id="m5l-fI-nsj"/>
                         <outlet property="playerOneCho" destination="7kS-wW-EXz" id="PAi-Ai-eEh"/>
                         <outlet property="playerOneGame" destination="Hmn-cz-9Vf" id="OwW-lL-gcz"/>
-                        <outlet property="playerOneGameDisplay" destination="aLl-vt-4Gd" id="Gfs-GN-uTJ"/>
+                        <outlet property="playerOneGameDisplay" destination="uEf-gp-bTI" id="rfh-fN-Mpu"/>
                         <outlet property="playerOneScore" destination="PXZ-K4-DPu" id="WPv-du-DP7"/>
                         <outlet property="playerTwoCho" destination="6ED-Iw-lIJ" id="Qpq-PM-mvy"/>
                         <outlet property="playerTwoGame" destination="g7Z-FI-wwc" id="MsC-3p-RF2"/>
-                        <outlet property="playerTwoGameDisplay" destination="bYh-mz-2VJ" id="dEA-O2-Ya8"/>
+                        <outlet property="playerTwoGameDisplay" destination="TeW-4Q-WVc" id="X3g-uE-KJD"/>
                         <outlet property="playerTwoScore" destination="aKL-UQ-Ezi" id="EmH-6N-AKF"/>
                         <outlet property="winnerLabel" destination="eOo-Zd-wkk" id="f0h-wX-EjQ"/>
                     </connections>

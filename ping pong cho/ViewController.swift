@@ -21,13 +21,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var playerOneScore: UILabel!
     @IBOutlet weak var playerOneGame: UIButton!
     @IBOutlet weak var playerOneCho: UIStepper!
-    @IBOutlet weak var playerOneGameDisplay: UITextField!
+//    @IBOutlet weak var playerOneGameDisplay: UITextField!
+    @IBOutlet weak var playerOneGameDisplay: UILabel!
     
     //@IBOutlet weak var playerTwoScore: UITextField!
     @IBOutlet weak var playerTwoScore: UILabel!
     @IBOutlet weak var playerTwoGame: UIButton!
     @IBOutlet weak var playerTwoCho: UIStepper!
-    @IBOutlet weak var playerTwoGameDisplay: UITextField!
+//    @IBOutlet weak var playerTwoGameDisplay: UITextField!
+    @IBOutlet weak var playerTwoGameDisplay: UILabel!
     
     @IBOutlet weak var gameProgressLabel: UILabel!
     @IBOutlet weak var gameProgressBar: UIProgressView!
@@ -68,6 +70,7 @@ class ViewController: UIViewController {
         print("Player 1 has \(playerOneTally) points")
         updateMatchProgress()
         self.playerOneScore.text = playerOneTally.description
+//        oldSchoolFun()
         if (playerOneTally >= pointsToWin) && (playerOneTally - playerTwoTally >= 2) { //11 = winPoints
             playerOneGames++ // player one wins a game
             self.playerOneGameDisplay.text = playerOneGames.description
@@ -80,6 +83,7 @@ class ViewController: UIViewController {
         playerTwoTally = Int(sender.value)
         print("Player 2 has \(playerTwoTally) points")
         updateMatchProgress()
+//        oldSchoolFun()
         self.playerTwoScore.text = playerTwoTally.description
         if (playerTwoTally >= pointsToWin) && (playerTwoTally - playerOneTally >= 2) {
             playerTwoGames++
@@ -97,11 +101,11 @@ class ViewController: UIViewController {
         self.playerTwoScore.text = playerTwoTally.description
     }
     func updateMatchProgress() {
-        overallProgress = Float(playerOneGames + playerTgiwoGames) * 0.20 + overallProgress
+        overallProgress = Float(playerOneGames + playerTwoGames) * 0.20
         let currentProgress = Float(playerOneTally + playerTwoTally)/100.00 + Float(overallProgress)
         gameProgressBar.setProgress(currentProgress, animated: false)
-        gameProgressLabel.text = ("\(currentProgress)%")
-        print("Match progress at \(currentProgress)%")
+        gameProgressLabel.text = ("\(currentProgress*100)%")
+        print("Match progress at \(currentProgress*100)%")
     }
     
     var counter:Int = 0 {
