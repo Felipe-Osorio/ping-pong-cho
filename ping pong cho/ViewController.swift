@@ -42,8 +42,21 @@ class ViewController: UIViewController {
 //        UIDevice.currentDevice().setValue(value, forKey: "orientation")
         gameProgressBar.setProgress(0, animated: true)
         oldSchool.setOn(false, animated: true)
-        var leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-        var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        swipeDown.direction = UISwipeGestureRecognizerDirection.Down
+        self.view.addGestureRecognizer(swipeDown)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        swipeRight.direction = UISwipeGestureRecognizerDirection.Left
+        self.view.addGestureRecognizer(swipeLeft)
+        
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        swipeDown.direction = UISwipeGestureRecognizerDirection.Up
+        self.view.addGestureRecognizer(swipeUp)
     }
     
 //    override func shouldAutorotate() -> Bool {
@@ -91,7 +104,6 @@ class ViewController: UIViewController {
             print("Player 1 takes Game \(playerOneGames + playerTwoGames)")
         }
         updateMatchProgress()
-        
     }
     
     @IBAction func twoClicker(sender: UIStepper) { //increment score
@@ -147,15 +159,56 @@ class ViewController: UIViewController {
         resetPointScores()
     }
     
-    func handleSwipes(sender:UISwipeGestureRecognizer) {
-        if (sender.direction == .Left) {
-            print("Swipe Left")
+    func playerOneScored() {
+        winnerLabel.text = ""
+        winnerLabel.layer.borderWidth = 0.0
+        playerOneTally += 1
+        print("Player 1 has \(playerOneTally) points")
+        self.playerOneScore.text = playerOneTally.description
+        oldSchoolFun()
+        if (playerOneTally >= pointsToWin) && (playerOneTally - playerTwoTally >= 2) { //11 = winPoints
+            playerOneGames++ // player one wins a game
+            self.playerOneGameDisplay.text = playerOneGames.description
+            triggerVictory() // player 1!
+            print("Player 1 takes Game \(playerOneGames + playerTwoGames)")
         }
-        if (sender.direction == .Right) {
-            print("Swipe Right")
+        updateMatchProgress()
+
+    }
+    
+    func playerTwoScored() {
+        winnerLabel.text = ""
+        winnerLabel.layer.borderWidth = 0.0
+        playerTwoTally += 1
+        print("Player 2 has \(playerTwoTally) points")
+        oldSchoolFun()
+        self.playerTwoScore.text = playerTwoTally.description
+        if (playerTwoTally >= pointsToWin) && (playerTwoTally - playerOneTally >= 2) {
+            playerTwoGames++
+            self.playerTwoGameDisplay.text = playerTwoGames.description
+            triggerVictory() // player 2!
+            print("Player 2 takes Game \(playerOneGames + playerTwoGames)")
+        }
+        updateMatchProgress()
+    }
+    
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.Right:
+                playerTwoScored()
+            case UISwipeGestureRecognizerDirection.Down:
+                print("Swiped down")
+            case UISwipeGestureRecognizerDirection.Left:
+                playerOneScored()
+            case UISwipeGestureRecognizerDirection.Up:
+                print("Swiped up")
+            default:
+                break
+            }
         }
     }
-
 }
 
 
