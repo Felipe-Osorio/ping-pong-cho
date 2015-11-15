@@ -37,11 +37,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        let value = UIInterfaceOrientation.LandscapeLeft.rawValue
-        UIDevice.currentDevice().setValue(value, forKey: "orientation")
+        // Do any additional setup after loading the view
+//        let value = UIInterfaceOrientation.LandscapeLeft.rawValue
+//        UIDevice.currentDevice().setValue(value, forKey: "orientation")
         gameProgressBar.setProgress(0, animated: true)
         oldSchool.setOn(false, animated: true)
+        var leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
     }
     
 //    override func shouldAutorotate() -> Bool {
@@ -124,7 +126,7 @@ class ViewController: UIViewController {
             return()
         }
         overallProgress = Float(gamesPlayed) * 0.20
-        let currentProgress = Float(playerOneTally + playerTwoTally)/100.00 + Float(overallProgress)
+        let currentProgress = Float(playerOneTally + playerTwoTally)/100.00 * Float(pointsToWin/11) + Float(overallProgress)
         gameProgressBar.setProgress(currentProgress, animated: false)
         gameProgressLabel.text = ("\(currentProgress*100)%")
         //print("Match progress at \(currentProgress*100)%")
@@ -142,9 +144,16 @@ class ViewController: UIViewController {
         winnerLabel.text = ("CHO!")
         winnerLabel.layer.borderWidth = 4.0
         winnerLabel.layer.borderColor = UIColor.redColor().CGColor
-        print("Victory triggered")
-        //sleep(1)
         resetPointScores()
+    }
+    
+    func handleSwipes(sender:UISwipeGestureRecognizer) {
+        if (sender.direction == .Left) {
+            print("Swipe Left")
+        }
+        if (sender.direction == .Right) {
+            print("Swipe Right")
+        }
     }
 
 }
