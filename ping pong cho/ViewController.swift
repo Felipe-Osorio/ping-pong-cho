@@ -199,7 +199,7 @@ class ViewController: UIViewController {
             case UISwipeGestureRecognizerDirection.Right:
                 playerTwoScored()
             case UISwipeGestureRecognizerDirection.Down:
-                print("Swiped down")
+                triggerVictory()
             case UISwipeGestureRecognizerDirection.Left:
                 playerOneScored()
             case UISwipeGestureRecognizerDirection.Up:
