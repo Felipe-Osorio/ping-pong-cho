@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import QuartzCore
 
 class ViewController: UIViewController {
     
@@ -29,17 +30,33 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var gameProgressLabel: UILabel!
     @IBOutlet weak var gameProgressBar: UIProgressView!
+    @IBOutlet weak var winnerLabel: UILabel!
     
     @IBOutlet weak var oldSchool: UISwitch!
-    @IBOutlet weak var winnerLabel: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //let value = UIInterfaceOrientation.LandscapeLeft.rawValue
-        //UIDevice.currentDevice().setValue(value, forKey: "orientation")
+        // Do any additional setup after loading the view
+//        let value = UIInterfaceOrientation.LandscapeLeft.rawValue
+//        UIDevice.currentDevice().setValue(value, forKey: "orientation")
         gameProgressBar.setProgress(0, animated: true)
         oldSchool.setOn(false, animated: true)
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        swipeDown.direction = UISwipeGestureRecognizerDirection.Down
+        self.view.addGestureRecognizer(swipeDown)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        swipeRight.direction = UISwipeGestureRecognizerDirection.Left
+        self.view.addGestureRecognizer(swipeLeft)
+        
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        swipeDown.direction = UISwipeGestureRecognizerDirection.Up
+        self.view.addGestureRecognizer(swipeUp)
     }
     
 //    override func shouldAutorotate() -> Bool {
@@ -74,6 +91,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func oneClicker(sender: UIStepper) { //increment score
+        winnerLabel.text = ""
+        winnerLabel.layer.borderWidth = 0.0
         playerOneTally = Int(sender.value)
         print("Player 1 has \(playerOneTally) points")
         self.playerOneScore.text = playerOneTally.description
@@ -82,14 +101,14 @@ class ViewController: UIViewController {
             playerOneGames++ // player one wins a game
             self.playerOneGameDisplay.text = playerOneGames.description
             triggerVictory() // player 1!
-            resetPointScores()
             print("Player 1 takes Game \(playerOneGames + playerTwoGames)")
         }
         updateMatchProgress()
-        
     }
     
     @IBAction func twoClicker(sender: UIStepper) { //increment score
+        winnerLabel.text = ""
+        winnerLabel.layer.borderWidth = 0.0
         playerTwoTally = Int(sender.value)
         print("Player 2 has \(playerTwoTally) points")
         oldSchoolFun()
@@ -98,7 +117,6 @@ class ViewController: UIViewController {
             playerTwoGames++
             self.playerTwoGameDisplay.text = playerTwoGames.description
             triggerVictory() // player 2!
-            resetPointScores()
             print("Player 2 takes Game \(playerOneGames + playerTwoGames)")
         }
         updateMatchProgress()
@@ -120,7 +138,7 @@ class ViewController: UIViewController {
             return()
         }
         overallProgress = Float(gamesPlayed) * 0.20
-        let currentProgress = Float(playerOneTally + playerTwoTally)/100.00 + Float(overallProgress)
+        let currentProgress = Float(playerOneTally + playerTwoTally)/100.00 * Float(pointsToWin/11) + Float(overallProgress)
         gameProgressBar.setProgress(currentProgress, animated: false)
         gameProgressLabel.text = ("\(currentProgress*100)%")
         //print("Match progress at \(currentProgress*100)%")
@@ -135,11 +153,62 @@ class ViewController: UIViewController {
     }
     
     func triggerVictory() {
-        winnerLabel.text = "CHO!" //for whom
-        sleep(5)
-        winnerLabel.text = ""
+        winnerLabel.text = ("CHO!")
+        winnerLabel.layer.borderWidth = 4.0
+        winnerLabel.layer.borderColor = UIColor.redColor().CGColor
+        resetPointScores()
     }
+    
+    func playerOneScored() {
+        winnerLabel.text = ""
+        winnerLabel.layer.borderWidth = 0.0
+        playerOneTally += 1
+        print("Player 1 has \(playerOneTally) points")
+        self.playerOneScore.text = playerOneTally.description
+        oldSchoolFun()
+        if (playerOneTally >= pointsToWin) && (playerOneTally - playerTwoTally >= 2) { //11 = winPoints
+            playerOneGames++ // player one wins a game
+            self.playerOneGameDisplay.text = playerOneGames.description
+            triggerVictory() // player 1!
+            print("Player 1 takes Game \(playerOneGames + playerTwoGames)")
+        }
+        updateMatchProgress()
 
+    }
+    
+    func playerTwoScored() {
+        winnerLabel.text = ""
+        winnerLabel.layer.borderWidth = 0.0
+        playerTwoTally += 1
+        print("Player 2 has \(playerTwoTally) points")
+        oldSchoolFun()
+        self.playerTwoScore.text = playerTwoTally.description
+        if (playerTwoTally >= pointsToWin) && (playerTwoTally - playerOneTally >= 2) {
+            playerTwoGames++
+            self.playerTwoGameDisplay.text = playerTwoGames.description
+            triggerVictory() // player 2!
+            print("Player 2 takes Game \(playerOneGames + playerTwoGames)")
+        }
+        updateMatchProgress()
+    }
+    
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.Right:
+                playerTwoScored()
+            case UISwipeGestureRecognizerDirection.Down:
+                triggerVictory()
+            case UISwipeGestureRecognizerDirection.Left:
+                playerOneScored()
+            case UISwipeGestureRecognizerDirection.Up:
+                print("Swiped up")
+            default:
+                break
+            }
+        }
+    }
 }
 
 

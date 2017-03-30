@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "21098E5F1BEECEF3005B33F9"
-               BuildableName = "ping_pong_cho.app"
+               BuildableName = "CHO.app"
                BlueprintName = "CHO"
                ReferencedContainer = "container:CHO.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "21098E5F1BEECEF3005B33F9"
-            BuildableName = "ping_pong_cho.app"
+            BuildableName = "CHO.app"
             BlueprintName = "CHO"
             ReferencedContainer = "container:CHO.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "21098E5F1BEECEF3005B33F9"
-            BuildableName = "ping_pong_cho.app"
+            BuildableName = "CHO.app"
             BlueprintName = "CHO"
             ReferencedContainer = "container:CHO.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "21098E5F1BEECEF3005B33F9"
-            BuildableName = "ping_pong_cho.app"
+            BuildableName = "CHO.app"
             BlueprintName = "CHO"
             ReferencedContainer = "container:CHO.xcodeproj">
          </BuildableReference>
